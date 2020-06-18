@@ -8,7 +8,8 @@ bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler()
 def tag_spei(message) :
-    bot.send_animation(message.chat.id, open('IMG_2923.MP4','rb'), reply_to_message_id=message.message_id)
+    if message.chat.id != 444508975:
+        bot.send_animation(message.chat.id, open('IMG_2923.MP4','rb'), reply_to_message_id=message.message_id)
     print(message)
 
 
